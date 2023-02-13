@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>My Website</title>
+  </head>
+  <body>
+    <!-- Tab Content -->
+    <div class="tab-content">
+      <div id="home" class="container tab-pane active">
+        <h3>Home</h3>
+        <p>Welcome to the home page.</p>
+      </div>
+      <div id="next-to-you" class="container tab-pane fade">
+        <h3>Next to You</h3>
+        <p>Find out what's happening around you.</p>
+      </div>
+      <div id="activities" class="container tab-pane fade">
+        <h3>Activities</h3>
+        <p>Discover new and exciting activities.</p>
+      </div>
+      <div id="photographers" class="container tab-pane fade">
+        <h3>Photographers</h3>
+        <p>Find professional photographers in your area.</p>
+      </div>
+      <div id="me" class="container tab-pane fade">
+        <h3>Me</h3>
+        <p>Manage your personal information.</p>
+      </div>
+    </div>
+
+    <!-- Tab Buttons -->
+    <div class="d-flex justify-content-around">
+      <button
+        class="btn btn-primary"
+        data-toggle="tab"
+        href="#home"
+        role="tab"
+      >
+        Home
+      </button>
+      <button
+        class="btn btn-primary"
+        data-toggle="tab"
+        href="#next-to-you"
+        role="tab"
+      >
+        Next to You
+      </button>
+      <button
+        class="btn btn-primary"
+        data-toggle="tab"
+        href="#activities"
+        role="tab"
+      >
+        Activities
+      </button>
+      <button
+        class="btn btn-primary"
+        data-toggle="tab"
+        href="#photographers"
+        role="tab"
+      >
+        Photographers
+      </button>
+      <button
+        class="btn btn-primary"
+        data-toggle="tab"
+        href="#me"
+        role="tab"
+      >
+        Me
+      </button>
+    </
