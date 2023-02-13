@@ -59,38 +59,46 @@
   }
 </script>
 
+<div class="tab-content mt-3">
+  <div id="home" class="container tab-pane active">
+    <h3>Home</h3>
+    <p>Welcome to the home page.</p>
+  </div>
+  <div id="next-to-you" class="container tab-pane fade">
+    <h3>Next to You</h3>
+    <p>Find out what's happening around you.</p>
+  </div>
+  <div id="activities" class="container tab-pane fade">
+    <h3>Activities</h3>
+    <p>Discover new and exciting activities.</p>
+  </div>
+  <div id="photographers" class="container tab-pane fade">
+    <h3>Photographers</h3>
+    <p>Find professional photographers in your area.</p>
+  </div>
+  <div id="me" class="container tab-pane fade">
+    <h3>Me</h3>
+    <p>Manage your personal information.</p>
+  </div>
+</div>
 
-    <!-- Tab Content -->
-    <div class="tab-content mt-3">
-      <div id="home" class="container tab-pane active">
-        <h3>Home</h3>
-        <p>Welcome to the home page.</p>
-      </div>
-      <div id="next-to-you" class="container tab-pane fade">
-        <h3>Next to You</h3>
-        <p>Find out what's happening around you.</p>
-      </div>
-      <div id="activities" class="container tab-pane fade">
-        <h3>Activities</h3>
-        <p>Discover new and exciting activities.</p>
-      </div>
-      <div id="photographers" class="container tab-pane fade">
-        <h3>Photographers</h3>
-        <p>Find professional photographers in your area.</p>
-      </div>
-      <div id="me" class="container tab-pane fade">
-        <h3>Me</h3>
-        <p>Manage your personal information.</p>
-      </div>
-    </div>
-
-    <!-- Tab Buttons -->
-<!-- Tab Buttons -->
     <div class="d-flex justify-content-around mt-3">
-      <a href="home.html" class="btn btn-primary">Home</a>
-      <a href="next-to-you.html" class="btn btn-primary">Next to You</a>
-      <a href="activities.html" class="btn btn-primary">Activities</a>
-      <a href="photographers.html" class="btn btn-primary">Photographers</a>
-      <a href="me.html" class="btn btn-primary">Me</a>
-    </div>
+  <a href="#home" class="btn btn-primary" data-toggle="tab">Home</a>
+  <a href="#next-to-you" class="btn btn-primary" data-toggle="tab">Next to You</a>
+  <a href="#activities" class="btn btn-primary" data-toggle="tab">Activities</a>
+  <a href="#photographers" class="btn btn-primary" data-toggle="tab">Photographers</a>
+  <a href="#me" class="btn btn-primary" data-toggle="tab">Me</a>
+</div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"
+></script>
 
