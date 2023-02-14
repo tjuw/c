@@ -4,156 +4,158 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Link to Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <!-- Link to custom CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>My Website</title>
   </head>
-  <style>
-  /* Set body font and background color */
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-  }
-
-  /* Set header font and background color */
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
-
-  /* Set header title font size and color */
-  header h1 {
-    font-size: 36px;
-    color: #fff;
-    margin: 0;
-  }
-
-  /* Set navigation bar background and text color */
-  nav {
-    background-color: #333;
-    color: #fff;
-  }
-
-  /* Set navigation links font size and color */
-  nav a {
-    color: #fff;
-    display: inline-block;
-    font-size: 18px;
-    padding: 10px 20px;
-    text-decoration: none;
-  }
-
-  /* Set active navigation link background color */
-  nav a.active {
-    background-color: #777;
-  }
-
-  /* Set tab content background color and padding */
-  .tab-content {
-    background-color: #fff;
-    padding: 20px;
-  }
-
-  /* Set tab content title font size and color */
-  .tab-content h2 {
-    color: #333;
-    font-size: 24px;
-    margin-top: 0;
-  }
-
-  /* Set tab content text font size and color */
-  .tab-content p {
-    color: #333;
-    font-size: 18px;
-    margin-top: 20px;
-  }
-</style>
-
   <body>
     <!-- Banner -->
-    <div class="d-flex align-items-center" style="background-color: #F0F0F0;">
-      <div class="d-flex p-2">
-        <div class="jumbotron text-center">
-        <img src="Sample1.jpg" alt="banner image" class="img-fluid rounded mx-auto d-block" style="width: 150px; height: 150px; border-radius: 50%;">
-          <h1 class="display-4">Welcome to My Website</h1>
-        <p class="lead">Discover new and exciting things happening around you.</p>
+    <header>
+      <img
+        src="Sample1.jpg"
+        alt="banner image"
+        class="img-fluid rounded mx-auto d-block"
+        style="width: 150px; height: 150px; border-radius: 50%;"
+      />
+      <h1 class="display-4">Welcome to My Website</h1>
+      <p class="lead">Discover new and exciting things happening around you.</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            data-toggle="tab"
+            href="#home"
+            role="tab"
+            aria-selected="true"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            data-toggle="tab"
+            href="#next-to-you"
+            role="tab"
+            aria-selected="false"
+            >Next to You</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            data-toggle="tab"
+            href="#events"
+            role="tab"
+            aria-selected="false"
+            >Events</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Tab Content -->
+    <div class="tab-content mt-3">
+      <div
+        id="home"
+        class="container tab-pane active"
+        role="tabpanel"
+        aria-labelledby="home-tab"
+      >
+        <h3>Home</h3>
+        <p>Welcome to the home page.</p>
       </div>
-
-        <div class="d-flex flex-column p-2">
-          <h3>Welcome to My Website</h3>
-          <p>Discover new and exciting things around you.</p>
-        </div>
+      <div
+        id="next-to-you"
+        class="container tab-pane fade"
+        role="tabpanel"
+        aria-labelledby="next-to-you-tab"
+      >
+        <h3>Next to You</h3>
+        <p>Discover events happening near you:</p>
+        <!-- Form to get user's location -->
+        <form>
+          <div class="form-group">
+            <label for="location">Enter your location:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="location"
+              placeholder="Enter your location"
+            />
+          </div>
+          <!-- Submit button to search for events near user's location -->
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <!-- Section to display events near user's location -->
+        <section id="events-near-you">
+          <h4>Events near you:</h4>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <h5>Event 1</h5>
+              <p>Description of event 1.</p>
+              <p>Date and time: [Insert date and time here]</p>
+            </li>
+            <li class="list-group-item">
+              <h5>Event 2</h5>
+              <p>Description of event 2.</p>
+              <p>Date and time: [Insert date and time here]</p>
+            </li>
+            <li class="list-group-item">
+              <h5>Event 3</h5>
+              <p>Description of event 3.</p>
+              <p>Date and time: [Insert date and time here]</p>
+            </li>
+          </ul>
+        </section>
       </div>
-    </div>
-    <!-- Add support for Object.assign() in older browsers -->
-<script>
-  if (typeof Object.assign != 'function') {
-    Object.assign = function (target, varArgs) {
-      // .length of function is 2
-      'use strict';
-      if (target == null) {
-        // TypeError if undefined or null
-        throw new TypeError('Cannot convert undefined or null to object');
-      }
+      <div
+        id="events"
+        class="container tab-pane fade"
+        role="tabpanel"
+        aria-labelledby="events-tab"
+      >
+        <h3>Events</h3>
+        <p>Explore events happening around the world:</p>
+        <!-- Form to get user's location -->
+        <form>
+          <div class="form-group">
+            <label for="location">Enter a location:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="location"
+              placeholder="Enter a location"
+            />
+          </div>
+          <!-- Submit button to search for events in the specified location -->
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <!-- Section to display events in the specified location -->
+        <section id="events-in-location">
+          <h4>Events in [Insert location here]:</h4>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <h5>Event 1</h5>
+              <p>Description of event 1.</p>
+              <p>Date and time: [Insert date and time here]</p>
+            </li>
+            <!-- Footer -->
+<footer>
+  <p>Copyright &copy; My Website 2023</p>
+</footer>
 
-      var to = Object(target);
-
-      for (var index = 1; index < arguments.length; index++) {
-        var nextSource = arguments[index];
-
-        if (nextSource != null) {
-          // Skip over if undefined or null
-          for (var nextKey in nextSource) {
-            // Avoid bugs when hasOwnProperty is shadowed
-            if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
-              to[nextKey] = nextSource[nextKey];
-            }
-          }
-        }
-      }
-      return to;
-    };
-  }
-</script>
-
-<div class="tab-content mt-3">
-  <div id="home" class="container tab-pane active">
-    <h3>Home</h3>
-    <p>Welcome to the home page.</p>
-  </div>
-  <div id="next-to-you" class="container tab-pane fade">
-    <h3>Next to You</h3>
-    <p>Find out what's happening around you.</p>
-  </div>
-  <div id="activities" class="container tab-pane fade">
-    <h3>Activities</h3>
-    <p>Discover new and exciting activities.</p>
-  </div>
-  <div id="photographers" class="container tab-pane fade">
-    <h3>Photographers</h3>
-    <p>Find professional photographers in your area.</p>
-  </div>
-  <div id="me" class="container tab-pane fade">
-    <h3>Me</h3>
-    <p>Manage your personal information.</p>
-  </div>
-</div>
-
-    <div class="d-flex justify-content-around mt-3">
-  <a href="#home" class="btn btn-primary" data-toggle="tab">Home</a>
-  <a href="#next-to-you" class="btn btn-primary" data-toggle="tab">Next to You</a>
-  <a href="#activities" class="btn btn-primary" data-toggle="tab">Activities</a>
-  <a href="#photographers" class="btn btn-primary" data-toggle="tab">Photographers</a>
-  <a href="#me" class="btn btn-primary" data-toggle="tab">Me</a>
-</div>
-
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- Link to jQuery, Popper.js, and Bootstrap JS -->
 <script
   src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -164,4 +166,12 @@
   integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
   crossorigin="anonymous"
 ></script>
+<script
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"
+></script>
 
+  </body>
+</html>
+             
